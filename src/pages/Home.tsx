@@ -40,7 +40,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 py-5 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 small-caps text-charcoal/70 text-center">
           <span>4.8 Average</span>
           <span className="text-line">·</span>
-          <span>150 Verified Reviews</span>
+          <span>+2,898 Reviews · 150 Shared</span>
           <span className="text-line">·</span>
           <span>96% Would Recommend</span>
           <span className="text-line">·</span>
