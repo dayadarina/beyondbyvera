@@ -17,22 +17,26 @@ export default function Home() {
         description="A journal of reviews, reflections, and the moments these pieces were made for. Beyond by Vera reviews and editorial journal."
       />
 
-      <section className="px-6 pt-20 pb-16 md:pt-32 md:pb-24">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-serif text-5xl md:text-7xl leading-[1.05] mb-7">
+      <section className="relative w-full overflow-hidden" style={{ height: "min(90vh, 800px)" }}>
+        <img
+          src="/Screenshot_2026-05-24_at_3.49.40_PM.png"
+          alt="Beyond by Vera"
+          className="absolute inset-0 w-full h-full object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-charcoal/10 to-transparent" />
+        <div className="absolute inset-0 flex flex-col items-center justify-end pb-16 md:pb-20 px-6 text-center">
+          <h1 className="font-serif text-5xl md:text-7xl leading-[1.05] mb-5 text-ivory drop-shadow-md">
             Stories from women<br className="hidden md:block" /> who wear Vera
           </h1>
-          <p className="text-lg md:text-xl text-charcoal/75 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-ivory/85 max-w-2xl mx-auto leading-relaxed mb-10 drop-shadow">
             A journal of reviews, reflections, and the moments these pieces were made for.
           </p>
-          <div className="mt-10">
-            <Link
-              to="/reviews"
-              className="inline-block border border-charcoal text-charcoal px-8 py-3 text-sm tracking-widest uppercase hover:bg-charcoal hover:text-ivory transition-colors"
-            >
-              Read the reviews
-            </Link>
-          </div>
+          <Link
+            to="/reviews"
+            className="inline-block border border-ivory text-ivory px-8 py-3 text-sm tracking-widest uppercase hover:bg-ivory hover:text-charcoal transition-colors"
+          >
+            Read the reviews
+          </Link>
         </div>
       </section>
 
@@ -80,14 +84,6 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {latestPosts.map((p) => (
               <Link key={p.slug} to={`/journal/${p.slug}`} className="group block">
-                <div className="aspect-[4/5] overflow-hidden mb-4 bg-line">
-                  <img
-                    src={p.heroImage}
-                    alt={p.heroImageAlt}
-                    loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700"
-                  />
-                </div>
                 <div className="small-caps text-charcoal/60 mb-2">{p.readTime}</div>
                 <h3 className="font-serif text-2xl md:text-3xl leading-tight mb-2 group-hover:text-terracotta transition-colors">
                   {p.title}
