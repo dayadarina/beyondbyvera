@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background-color: #FAF6F0;
+  color: #1A1F2C;
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+.small-caps {
+  font-family: "Inter", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.prose-editorial p {
+  line-height: 1.85;
+  margin-bottom: 1.3rem;
+  font-size: 1.05rem;
+  color: #2a2f3a;
+}
+.prose-editorial h2 {
+  font-size: 1.85rem;
+  margin-top: 2.4rem;
+  margin-bottom: 1rem;
+}
+.prose-editorial blockquote {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.55rem;
+  line-height: 1.45;
+  border-left: 2px solid #C68B6B;
+  padding: 0.3rem 0 0.3rem 1.5rem;
+  margin: 2.2rem 0;
+  color: #1A1F2C;
+}
