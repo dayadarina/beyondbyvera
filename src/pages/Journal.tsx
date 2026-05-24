@@ -28,14 +28,6 @@ export default function Journal() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {sorted.map((p) => (
             <Link key={p.slug} to={`/journal/${p.slug}`} className="group block">
-              <div className="aspect-[4/5] overflow-hidden mb-4 bg-line">
-                <img
-                  src={p.heroImage}
-                  alt={p.heroImageAlt}
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700"
-                />
-              </div>
               <div className="small-caps text-charcoal/60 mb-2">{formatDate(p.date)} · {p.readTime}</div>
               <h2 className="font-serif text-2xl md:text-3xl leading-tight mb-2 group-hover:text-terracotta transition-colors">
                 {p.title}

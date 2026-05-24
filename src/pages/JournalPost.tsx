@@ -48,16 +48,6 @@ export default function JournalPost() {
           <p className="text-charcoal/75 text-lg leading-relaxed">{post.excerpt}</p>
         </header>
 
-        <div className="px-6">
-          <div className="max-w-5xl mx-auto aspect-[16/9] overflow-hidden bg-line">
-            <img
-              src={post.heroImage}
-              alt={post.heroImageAlt}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-
         <div className="px-6 py-14 md:py-20">
           <div className="max-w-prose mx-auto prose-editorial">
             {renderBody(post.body)}
