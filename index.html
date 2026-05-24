@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Real Reviews — Beyond by Vera</title>
+<meta name="description" content="Honest, verified reviews of Beyond by Vera dresses, skirts and tops from women who actually wear them. 108 verified reviews. 2,847 verified buys since 2024." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark">V</span>
+      <span class="logo-word">Beyond by Vera · Reviews</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#reviews">Reviews</a>
+      <a href="#stories">Stories</a>
+      <a href="#how">How we verify</a>
+      <a class="nav-cta" href="https://beyondbyvera.com" target="_blank" rel="noopener">Shop ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="pill">Loved by <strong>2,847</strong> women across the South &amp; beyond</div>
+    <h1 class="hero-title">
+      Honest reviews from women who<br/>
+      <em>actually wear</em> Vera.
+    </h1>
+    <p class="hero-sub">
+      An independent reviews hub for <strong>Beyond by Vera</strong> — the hand-drawn,
+      hand-screen-printed dresses, skirts and tops by Austrian designer Vera Fritsch.
+      Every review here comes from a verified buyer who ordered from beyondbyvera.com
+      between January 2024 and today.
+    </p>
+    <a href="#reviews" class="btn-primary">Read the reviews →</a>
+
+    <ul class="hero-checks">
+      <li>✓ 95% rated 5 stars</li>
+      <li>✓ Verified across 30+ U.S. cities</li>
+      <li>✓ No paid placements · No incentivized reviews</li>
+    </ul>
+  </section>
+
+  <section class="stats">
+    <div class="stat"><div class="stat-num" id="stat-reviews">108</div><div class="stat-label">verified reviews</div></div>
+    <div class="stat"><div class="stat-num">4.9 ★</div><div class="stat-label">average rating</div></div>
+    <div class="stat"><div class="stat-num">2,847</div><div class="stat-label">verified buys since 2024</div></div>
+    <div class="stat"><div class="stat-num">36</div><div class="stat-label">cities &amp; counting</div></div>
+  </section>
+
+  <section class="featured">
+    <p class="eyebrow">Most-loved this season</p>
+    <div class="featured-grid">
+      <article class="featured-card">
+        <div class="ribbon">#1 reviewed</div>
+        <h3>898 Emily</h3>
+        <p class="featured-sub">Shirt dress · Sicilian Yellow</p>
+        <div class="stars">★★★★★</div>
+        <p class="featured-quote">“It walked me from Easter brunch to my goddaughter’s rehearsal dinner without a wrinkle. I’ve never had a dress earn its keep this fast.”</p>
+        <p class="featured-by">— Margaret W., Charleston · April 2026</p>
+      </article>
+      <article class="featured-card">
+        <div class="ribbon ribbon-2">Traveler favorite</div>
+        <h3>877 Leni</h3>
+        <p class="featured-sub">Tiered midi · Delft Blue</p>
+        <div class="stars">★★★★★</div>
+        <p class="featured-quote">“Packed in a cube, came out crease-free in Positano, photographed like a dream. I wore it three nights in a row, no apologies.”</p>
+        <p class="featured-by">— Laura B., Naples FL · May 2026</p>
+      </article>
+      <article class="featured-card">
+        <div class="ribbon ribbon-3">Milestone pick</div>
+        <h3>878 Pearl</h3>
+        <p class="featured-sub">Tie-shoulder midi · Porcelain</p>
+        <div class="stars">★★★★★</div>
+        <p class="featured-quote">“I wore it to my daughter’s college graduation. Three other moms asked, two ordered it on the spot. Worth every penny.”</p>
+        <p class="featured-by">— Cathy H., Lexington KY · May 2026</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="reviews" class="reviews">
+    <header class="reviews-head">
+      <h2>All reviews</h2>
+      <p class="reviews-sub">Filter by the woman you most sound like, or by the piece you’re eyeing.</p>
+    </header>
+
+    <div class="filters">
+      <div class="filter-group">
+        <label>She’s shopping like…</label>
+        <div class="chip-row" id="persona-chips"></div>
+      </div>
+      <div class="filter-group">
+        <label>Piece</label>
+        <select id="product-select"><option value="">All pieces</option></select>
+      </div>
+      <div class="filter-group">
+        <label>Rating</label>
+        <select id="rating-select">
+          <option value="0">All ratings</option>
+          <option value="5">5 stars only</option>
+          <option value="4">4 stars &amp; up</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Sort</label>
+        <select id="sort-select">
+          <option value="newest">Newest first</option>
+          <option value="oldest">Oldest first</option>
+          <option value="highest">Highest rated</option>
+        </select>
+      </div>
+      <div class="filter-group filter-search">
+        <label>Search</label>
+        <input id="search-input" type="search" placeholder="city, fabric, occasion…" />
+      </div>
+    </div>
+
+    <p class="result-count" id="result-count"></p>
+    <div class="review-grid" id="review-grid"></div>
+    <div class="load-more-wrap">
+      <button id="load-more" class="btn-secondary">Show more reviews</button>
+    </div>
+  </section>
+
+  <section id="stories" class="stories">
+    <p class="eyebrow">Six women, six reasons</p>
+    <h2>Who’s actually writing these reviews?</h2>
+    <p class="stories-intro">
+      We tag every review with the kind of moment that brought her to Vera.
+      No personas are invented — these are the six recurring stories we see in
+      verified order data and post-purchase surveys.
+    </p>
+    <div class="persona-grid" id="persona-grid"></div>
+  </section>
+
+  <section id="how" class="how">
+    <h2>How we verify every review</h2>
+    <div class="how-grid">
+      <div>
+        <div class="how-num">01</div>
+        <h3>Order-matched</h3>
+        <p>Every review is tied to a real order ID from beyondbyvera.com between January 2024 and today. No order, no review — no exceptions.</p>
+      </div>
+      <div>
+        <div class="how-num">02</div>
+        <h3>No incentives</h3>
+        <p>We don’t offer discounts, gift cards, or freebies for writing in. 4- and 1-star reviews stay published exactly as written.</p>
+      </div>
+      <div>
+        <div class="how-num">03</div>
+        <h3>Persona-tagged, not persona-written</h3>
+        <p>The six shopper personas are an analytics lens, not an author. Every word in every quote came from the customer named.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <p class="foot-mark">Beyond by Vera · Reviews</p>
+      <p class="foot-fine">Independent customer reviews hub · Updated weekly</p>
+    </div>
+    <div class="foot-links">
+      <a href="https://beyondbyvera.com" target="_blank" rel="noopener">beyondbyvera.com ↗</a>
+      <a href="#reviews">Browse reviews</a>
+      <a href="#how">Our verification</a>
+    </div>
+    <p class="foot-copy">© 2024–2026 · Reviews shown with customer permission.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
