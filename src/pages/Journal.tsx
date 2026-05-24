@@ -13,6 +13,7 @@ export default function Journal() {
       <Seo
         title="The Journal"
         description="Essays on wearable prints, the moments that call for them, and the women who wear them."
+        canonical="/journal"
       />
 
       <section className="px-6 pt-16 pb-12 md:pt-24 text-center">

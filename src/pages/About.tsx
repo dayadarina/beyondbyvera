@@ -6,6 +6,7 @@ export default function About() {
       <Seo
         title="About"
         description="About the Beyond by Vera reviews and journal — why these reviews exist, how they are verified, and the brand they celebrate."
+        canonical="/about"
       />
 
       <section className="px-6 pt-16 pb-12 md:pt-24 text-center">

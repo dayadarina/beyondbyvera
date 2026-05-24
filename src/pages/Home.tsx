@@ -15,6 +15,19 @@ export default function Home() {
       <Seo
         title="Stories from women who wear Vera"
         description="A journal of reviews, reflections, and the moments these pieces were made for. Beyond by Vera reviews and editorial journal."
+        canonical="/"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Beyond by Vera Journal",
+          "description": "A journal of reviews, reflections, and the moments these pieces were made for.",
+          "url": "https://beyondbyvera-journal.com/",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Beyond by Vera",
+            "url": "https://beyondbyvera.com"
+          }
+        }}
       />
 
       <section className="relative w-full overflow-hidden" style={{ height: "min(90vh, 800px)" }}>

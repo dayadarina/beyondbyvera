@@ -48,6 +48,26 @@ export default function Reviews() {
       <Seo
         title="Reviews"
         description="All 150 verified reviews of Beyond by Vera pieces — filterable by rating and occasion."
+        canonical="/reviews"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ReviewNewsArticle",
+          "name": "Beyond by Vera Reviews",
+          "description": "Verified customer reviews of Beyond by Vera pieces.",
+          "url": "https://beyondbyvera-journal.com/reviews",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "reviewCount": "2898"
+          },
+          "itemReviewed": {
+            "@type": "Brand",
+            "name": "Beyond by Vera",
+            "url": "https://beyondbyvera.com"
+          }
+        }}
       />
 
       <section className="px-6 pt-16 pb-10 md:pt-24">

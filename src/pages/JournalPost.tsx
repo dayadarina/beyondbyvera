@@ -2,6 +2,8 @@ import { Link, useParams } from "react-router-dom";
 import Seo from "../components/Seo";
 import { posts } from "../data/posts";
 
+const SITE_URL = "https://beyondbyvera-journal.com";
+
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
 }
@@ -33,9 +35,46 @@ export default function JournalPost() {
     );
   }
 
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.excerpt,
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "url": `${SITE_URL}/journal/${post.slug}`,
+    "image": post.heroImage || `${SITE_URL}/og-default.jpg`,
+    "author": {
+      "@type": "Organization",
+      "name": "Beyond by Vera",
+      "url": "https://beyondbyvera.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Beyond by Vera Journal",
+      "url": SITE_URL,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${SITE_URL}/favicon.svg`
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/journal/${post.slug}`
+    }
+  };
+
   return (
     <>
-      <Seo title={post.title} description={post.excerpt} />
+      <Seo
+        title={post.title}
+        description={post.excerpt}
+        canonical={`/journal/${post.slug}`}
+        ogImage={post.heroImage || undefined}
+        type="article"
+        article={{ publishedTime: post.date, author: "Beyond by Vera" }}
+        structuredData={articleStructuredData}
+      />
 
       <article>
         <header className="px-6 pt-12 md:pt-20 pb-10 max-w-prose mx-auto text-center">
